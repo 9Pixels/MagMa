@@ -36,6 +36,7 @@
 .fa-user:before {content: "\f007";}
 .fa-comment:before {content: "\f075";}
 .fa-reply:before {content: "\f112";}
+.fa-bars:before {content: "\f0c9";}
 
 .cf:before,
 .cf:after {
@@ -98,7 +99,7 @@ header{
 
     .top_header{
         width: 100%;
-        height: 32px;
+        min-height: 32px;
         font-family: 'Roboto Condensed', sans-serif;
         font-size: 16px; 
         text-transform: uppercase;
@@ -148,6 +149,7 @@ header{
             float: left;
 
             .logo{
+                max-width: 70%;
                 float: left;
                 font-family: "Roboto", sans-serif;
                 font-size: 56px;
@@ -163,6 +165,7 @@ header{
 
                 img{
                     max-height: 100px;
+                    max-width: 100%;
                     display: block;
                 }
             }
@@ -189,6 +192,10 @@ header{
             }
         }
 
+        .closed{
+            display: none;
+        }
+
         .main_navigation{
             width: 100%;
             float: left;
@@ -204,6 +211,10 @@ header{
                 font-size: 18px;
                 @extend .transition;
                 position: relative;
+
+                &.active{
+                    background: $cyan;
+                }
 
                 a{
                     padding: 10px 15px;
@@ -248,6 +259,121 @@ header{
                 left: 0;
                 background: $blue;
                 display: none;
+                z-index: 2;
+
+                li{
+                    width: 100%;
+                    float: left;
+                    @extend .borderbox;
+                    font-size: 16px;
+
+                    a{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .responsive_navigation{
+            width: 100%;
+            float: left;
+            background: $blue;
+            padding: 10px 15px;
+            @extend .borderbox;
+            display: none;
+
+            .search{
+                width: 40%;
+                float: right;
+
+                input{
+                    width: 100%;
+                    height: 30px;
+                    padding: 0 10px;
+                    @extend .borderbox;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-size: 14px;
+                    border: 1px solid $blue;
+                    -webkit-appearance: none;
+                    border-radius: 0;
+                    background: #456B91;
+                    color: #fff;
+                    &:focus{
+                        border: 1px solid $blue;
+                    }
+                }
+            }
+
+            .open_menu{
+                font-family: 'Robotoo Condensed', sans-serif;
+                font-size: 18px;
+                line-height: 30px;
+                @extend .transition;
+                cursor: pointer;
+
+                &:hover{
+                    @extend .opacity;
+                }
+
+                &.fa:before{
+                    margin-right: 7px;
+                }
+            }
+
+            .menu{
+                float: left;
+                margin-top: 10px;
+            }
+
+            li{
+                width: 100%;
+                float: left;
+                font-family: 'Robotoo Condensed', sans-serif;
+                font-size: 18px;
+                @extend .transition;
+                position: relative;
+
+                &.active{
+                    background: $cyan;
+                }
+
+                a{
+                    padding: 10px 15px;
+                    display: block;
+                    @extend .borderbox;
+
+                    &:hover{
+                        color: inherit;
+                    }
+                }
+
+                &:first-child{
+                    margin-left: 0;
+                }
+
+                &:hover{
+                    background: $cyan;
+                }
+
+                &.child{
+
+                    &:after{
+                        content:'\f078';
+                        font-family: "FontAwesome";
+                        font-size: 12px;
+                        position: absolute;
+                        top: 12px;
+                        right: 5px;
+                    }
+                }
+            }
+
+            .sub-menu{
+                position: absolute;
+                width: 100%;
+                top: 38px;
+                left: 0;
+                background: $blue;
                 z-index: 2;
 
                 li{
@@ -686,15 +812,17 @@ section{
 
 .breadcrumbs{
     width: 100%;
-    height: 30px;
+    min-height: 30px;
     float: left;
     margin-bottom: 20px;
     border-bottom: 2px solid $green;
 
     ul{
-        background: $green;
-        float: left;
         height: 100%;
+        float: left;
+        padding: 0 15px;
+        @extend .borderbox;
+        background: $green;
     }
 
     li{
@@ -707,14 +835,6 @@ section{
 
         a{
             color: #fff;
-        }
-
-        &:first-child{
-            padding-left: 15px;
-        }
-
-        &:last-child{
-            padding-right: 15px;
         }
 
         &:after{
@@ -1200,7 +1320,7 @@ footer{
 
     .copyright{
         width: 100%;
-        height: 60px;
+        min-height: 60px;
         float: left;
         padding: 0 15px;
         @extend .borderbox;
@@ -1235,3 +1355,208 @@ footer{
     }
 }
 
+@media only screen and (max-width: 1280px){
+    .wrapper{
+        width: 94%;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .featured{
+        .featured_article{
+            width: 100%;
+        }
+
+        .more_featured{
+            width: 100%;
+            margin-top: 30px;
+            float: left;
+
+            .small_featured_article{
+                width: 49%;
+
+                &:nth-child(2n+1){
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    aside{
+        width: 100%;
+        margin-top: 30px;
+
+        .sidebar_news,
+        .widget{
+            width: 49%;
+            margin-left: 2%;
+
+            &:nth-child(2n+1){
+                margin-left: 0;
+            }
+        }
+    }
+
+    footer .box{
+        width: 50%;
+
+        &:nth-child(2n+1){
+            clear: both;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    header .main_header{
+        .main_navigation,
+        .holder .search{
+            display: none;
+        }
+
+        .responsive_navigation{
+            display: block;
+        }
+
+        .holder .logo{
+            max-width: 100%;
+        }
+    }
+
+    .featured{
+        .featured_article{
+            height: 300px;
+        }
+
+        .more_featured .small_featured_article{
+            width: 100%;
+            margin-left: 0;
+
+            &:nth-child(2){
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .col1{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    .comments_section #respond{
+        width: 80%;
+    }
+
+    aside .sidebar_news,
+    aside .widget{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    footer .box{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    header{
+        .top_header{
+            padding: 7px 0;
+        }
+
+        .top_navigation,
+        .top_social{
+            width: 100%;
+            float: left;
+        }
+
+        .top_social{
+            margin-top: 7px;
+        }
+
+        .main_header{
+            padding: 0 10px;
+
+            .responsive_navigation .search{
+                width: 60%;
+            }
+
+            .holder .logo{
+                font-size: 44px;
+            }
+        }
+    }
+
+    main{
+        padding: 20px 10px;
+    }
+
+    .featured .featured_article,
+    .category_post .featured_image{
+        height: 250px;
+    }
+
+    .comments_section{
+        #respond{
+            width: 100%;
+
+            .comm_form label,
+            .comm_form input{
+                width: 100%;
+            }
+        }
+
+        .comments_list{
+            .avatar{
+                width: 16%;
+
+                img{
+                    max-width: 100%;
+                }
+            }
+
+            .comment{
+                width: 82%;
+            }
+
+            ul.reply_comm{
+                width: 90%;
+            }
+        }
+    }
+
+    footer{
+        .contact_form .submit_button{
+            width: 100%;
+        }
+
+        .copyright{
+            text-align: center;
+
+            .left{
+                float: none;
+                display: block;
+            }
+
+            .right{
+                float: none;
+                display: block;
+                margin-top: 7px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .wrapper{
+        width: 100%;
+    }
+}

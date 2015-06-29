@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Roboto+Condensed:700,400|Roboto:400,300,700,400italic,300italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Roboto+Condensed:700,400|Roboto:400,300,700,400italic,300italic,700italic' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<title>Magazine</title>
@@ -34,8 +34,8 @@
 			<div class="main_header">
 				<div class="holder">
 					<a href="index.html" title="Home" class="logo">
-						<!-- <img src="images/logo.png" alt="#" /> -->
-						NEWS MAGAZINE <span>Be Informed. Be Smart.</span>
+						<img src="images/logo.png" alt="#" />
+						<!-- NEWS MAGAZINE <span>Be Informed. Be Smart.</span> -->
 					</a>
 					<form class="search">
 						<input type="search" placeholder="Search..."/>
@@ -43,7 +43,7 @@
 				</div><!-- /.holder -->
 				<nav class="main_navigation">
 					<ul>
-						<li><a href="index.html" title="#">Home</a></li>
+						<li class="active"><a href="index.html" title="#">Home</a></li>
 						<li><a href="#" title="#">Technology</a></li>
 						<li><a href="#" title="#">Politics</a></li>
 						<li><a href="#" title="#">Fashion</a></li>
@@ -58,7 +58,29 @@
 						</li>
 						<li><a href="#" title="#">Blog</a></li>
 					</ul>
-				</nav>
+				</nav><!-- /.main_navigation -->
+				<nav class="responsive_navigation">
+					<i class="fa fa-bars open_menu">Menu</i>
+					<form class="search">
+						<input type="search" placeholder="Search..."/>
+					</form>
+					<ul class="menu closed">
+						<li class="active"><a href="index.html" title="#">Home</a></li>
+						<li><a href="#" title="#">Technology</a></li>
+						<li><a href="#" title="#">Politics</a></li>
+						<li><a href="#" title="#">Fashion</a></li>
+						<li class="child">
+							<a href="#" title="#">Sport</a>
+							<ul class="sub-menu">
+								<li><a href="#">Soccer</a></li>
+								<li><a href="#">Tennis</a></li>
+								<li><a href="#">Golf</a></li>
+								<li><a href="#">Formula 1</a></li>
+							</ul>
+						</li>
+						<li><a href="#" title="#">Blog</a></li>
+					</ul>
+				</nav><!-- /.responsive_navigation -->
 			</div><!-- /.header -->
 		</div><!-- /.wrapper -->
 	</header>
@@ -67,14 +89,14 @@
 
 			<!-- featured article section -->
 			<section class="featured">
-				<div class="featured_article" style="background-image:url(images/img1.png)">
+				<div class="featured_article" style="background-image:url(images/img3.png)">
 					<div class="overlay">
 						<a href="single.html" title="#" class="title">Lorem ipsum dolor sit amet</a>
 						<div class="meta">
 							<ul>
 								<li>
 									<i class="fa fa-calendar-o"></i>
-									<a href="#" title="#"><time>29.06.15</time></a>
+									<a href="#" title="#"><time>2015-07-13</time></a>
 								</li>
 								<li>
 									<i class="fa fa-user"></i>
@@ -96,7 +118,7 @@
 								<ul>
 									<li>
 										<i class="fa fa-calendar-o"></i>
-										<a href="#" title="#"><time>29.06.15</time></a>
+										<a href="#" title="#"><time>2015-07-13</time></a>
 									</li>
 									<li>
 										<i class="fa fa-user"></i>
@@ -117,7 +139,7 @@
 								<ul>
 									<li>
 										<i class="fa fa-calendar-o"></i>
-										<a href="#" title="#"><time>29.06.15</time></a>
+										<a href="#" title="#"><time>2015-07-13</time></a>
 									</li>
 									<li>
 										<i class="fa fa-user"></i>
@@ -131,14 +153,14 @@
 							</div><!-- /.meta -->
 						</div><!-- /.overlay -->
 					</div><!-- /.small_featured_article -->
-					<div class="small_featured_article" style="background-image:url(images/img3.png)">
+					<div class="small_featured_article" style="background-image:url(images/img1.png)">
 						<div class="overlay">
 							<a href="#" title="#" class="title">Lorem ipsum dolor</a>
 							<div class="meta">
 								<ul class="cf">
 									<li>
 										<i class="fa fa-calendar-o"></i>
-										<a href="#" title="#"><time>29.06.15</time></a>
+										<a href="#" title="#"><time>2015-07-13</time></a>
 									</li>
 									<li>
 										<i class="fa fa-user"></i>
@@ -159,7 +181,7 @@
 								<ul class="cf">
 									<li>
 										<i class="fa fa-calendar-o"></i>
-										<a href="#" title="#"><time>29.06.15</time></a>
+										<a href="#" title="#"><time>2015-07-13</time></a>
 									</li>
 									<li>
 										<i class="fa fa-user"></i>
@@ -203,7 +225,7 @@
 											<ul class="cf">
 												<li>
 													<i class="fa fa-calendar-o"></i>
-													<a href="#" title="#"><time>29.06.15</time></a>
+													<a href="#" title="#"><time>2015-07-13</time></a>
 												</li>
 												<li>
 													<i class="fa fa-user"></i>
@@ -216,7 +238,7 @@
 											</ul>
 										</div><!-- /.meta -->
 										<div class="text">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
 										</div><!-- /.text -->
 									</div><!-- /.entry -->
 								</div><!-- /.article -->
@@ -231,7 +253,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -249,7 +271,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -267,7 +289,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -285,7 +307,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -321,7 +343,7 @@
 											<ul class="cf">
 												<li>
 													<i class="fa fa-calendar-o"></i>
-													<a href="#" title="#"><time>29.06.15</time></a>
+													<a href="#" title="#"><time>2015-07-13</time></a>
 												</li>
 												<li>
 													<i class="fa fa-user"></i>
@@ -347,7 +369,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -365,7 +387,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -383,7 +405,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -401,7 +423,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -432,7 +454,7 @@
 											<ul class="cf">
 												<li>
 													<i class="fa fa-calendar-o"></i>
-													<a href="#" title="#"><time>29.06.15</time></a>
+													<a href="#" title="#"><time>2015-07-13</time></a>
 												</li>
 												<li>
 													<i class="fa fa-user"></i>
@@ -458,7 +480,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -476,7 +498,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -494,7 +516,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -512,7 +534,7 @@
 												<ul class="cf">
 													<li>
 														<i class="fa fa-calendar-o"></i>
-														<a href="#" title="#"><time>29.06.15</time></a>
+														<a href="#" title="#"><time>2015-07-13</time></a>
 													</li>
 													<li>
 														<i class="fa fa-comment"></i>
@@ -550,7 +572,7 @@
 									<ul class="cf">
 										<li>
 											<i class="fa fa-calendar-o"></i>
-											<a href="#" title="#"><time>29.06.15</time></a>
+											<a href="#" title="#"><time>2015-07-13</time></a>
 										</li>
 										<li>
 											<i class="fa fa-user"></i>
@@ -574,7 +596,7 @@
 											<ul class="cf">
 												<li>
 													<i class="fa fa-calendar-o"></i>
-													<a href="#" title="#"><time>29.06.15</time></a>
+													<a href="#" title="#"><time>2015-07-13</time></a>
 												</li>
 												<li>
 													<i class="fa fa-comment"></i>
@@ -592,7 +614,7 @@
 											<ul class="cf">
 												<li>
 													<i class="fa fa-calendar-o"></i>
-													<a href="#" title="#"><time>29.06.15</time></a>
+													<a href="#" title="#"><time>2015-07-13</time></a>
 												</li>
 												<li>
 													<i class="fa fa-comment"></i>
@@ -610,7 +632,7 @@
 											<ul class="cf">
 												<li>
 													<i class="fa fa-calendar-o"></i>
-													<a href="#" title="#"><time>29.06.15</time></a>
+													<a href="#" title="#"><time>2015-07-13</time></a>
 												</li>
 												<li>
 													<i class="fa fa-comment"></i>
@@ -641,7 +663,7 @@
 									<ul class="cf">
 										<li>
 											<i class="fa fa-calendar-o"></i>
-											<a href="#" title="#"><time>29.06.15</time></a>
+											<a href="#" title="#"><time>2015-07-13</time></a>
 										</li>
 										<li>
 											<i class="fa fa-user"></i>
@@ -665,7 +687,7 @@
 										<ul class="cf">
 											<li>
 												<i class="fa fa-calendar-o"></i>
-												<a href="#" title="#"><time>29.06.15</time></a>
+												<a href="#" title="#"><time>2015-07-13</time></a>
 											</li>
 											<li>
 												<i class="fa fa-comment"></i>
@@ -683,7 +705,7 @@
 										<ul class="cf">
 											<li>
 												<i class="fa fa-calendar-o"></i>
-												<a href="#" title="#"><time>29.06.15</time></a>
+												<a href="#" title="#"><time>2015-07-13</time></a>
 											</li>
 											<li>
 												<i class="fa fa-comment"></i>
@@ -701,7 +723,7 @@
 										<ul class="cf">
 											<li>
 												<i class="fa fa-calendar-o"></i>
-												<a href="#" title="#"><time>29.06.15</time></a>
+												<a href="#" title="#"><time>2015-07-13</time></a>
 											</li>
 											<li>
 												<i class="fa fa-comment"></i>
@@ -731,7 +753,7 @@
 								<ul class="cf">
 									<li>
 										<i class="fa fa-calendar-o"></i>
-										<a href="#" title="#"><time>29.06.15</time></a>
+										<a href="#" title="#"><time>2015-07-13</time></a>
 									</li>
 									<li>
 										<i class="fa fa-comment"></i>
@@ -749,7 +771,7 @@
 								<ul class="cf">
 									<li>
 										<i class="fa fa-calendar-o"></i>
-										<a href="#" title="#"><time>29.06.15</time></a>
+										<a href="#" title="#"><time>2015-07-13</time></a>
 									</li>
 									<li>
 										<i class="fa fa-comment"></i>
@@ -767,7 +789,7 @@
 								<ul class="cf">
 									<li>
 										<i class="fa fa-calendar-o"></i>
-										<a href="#" title="#"><time>29.06.15</time></a>
+										<a href="#" title="#"><time>2015-07-13</time></a>
 									</li>
 									<li>
 										<i class="fa fa-comment"></i>
@@ -806,7 +828,7 @@
 				<div class="content">
 					<form class="contact_form">
 						<label for="name">Enter name (required)</label>
-						<input type="text" id="#name" required />
+						<input type="text" id="name" required />
 						<label for="mail">Enter email (required)</label>
 						<input type="email" id="mail" required />
 						<label for="message">Enter message</label>
@@ -823,5 +845,6 @@
 			</div><!-- /.copyright -->
 		</footer>
 	</div><!-- /.wrapper -->
+<script src="scripts/script.js"></script>
 </body>
 </html>
