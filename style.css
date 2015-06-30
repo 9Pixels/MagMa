@@ -49,7 +49,7 @@ input:focus {
   outline: none;
 }
 
-.borderbox, header .main_header, header .main_header .holder .search input, header .main_header .main_navigation li a, header .main_header .main_navigation .sub-menu li, header .main_header .responsive_navigation, header .main_header .responsive_navigation .search input, header .main_header .responsive_navigation li a, header .main_header .responsive_navigation .sub-menu li, main, .featured .overlay, .other_news, .breadcrumbs ul, .comments_section .comm_form input, .comments_section .comm_form textarea, .comments_section .comments_list li, footer .box, footer .footer_news, footer .contact_form input, footer .contact_form textarea, footer .copyright, footer .copyright .container {
+.borderbox, header .main_header, header .main_header .holder .search input, header .main_header .main_navigation li a, header .main_header .main_navigation .sub-menu li, header .main_header .responsive_navigation, header .main_header .responsive_navigation .search input, header .main_header .responsive_navigation li, header .main_header .responsive_navigation li a, header .main_header .responsive_navigation .sub-menu li, main, .featured .overlay, .other_news, .breadcrumbs ul, .comments_section .comm_form input, .comments_section .comm_form textarea, .comments_section .comments_list li, footer .box, footer .footer_news, footer .contact_form input, footer .contact_form textarea, footer .copyright, footer .copyright .container {
   box-sizing: border-box !important;
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
@@ -281,7 +281,7 @@ header .main_header .main_navigation ul {
 }
 header .main_header .main_navigation li {
   float: left;
-  font-family: 'Robotoo Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   position: relative;
 }
@@ -323,6 +323,8 @@ header .main_header .main_navigation .sub-menu {
   background: #2b4e72;
   display: none;
   z-index: 2;
+  -webkit-box-shadow: 0 0 20px -4px #2790b0;
+  box-shadow: 0 0 20px -4px #2790b0;
 }
 header .main_header .main_navigation .sub-menu li {
   width: 100%;
@@ -336,12 +338,13 @@ header .main_header .responsive_navigation {
   width: 100%;
   float: left;
   background: #2b4e72;
-  padding: 10px 15px;
+  padding: 10px 0;
   display: none;
 }
 header .main_header .responsive_navigation .search {
   width: 40%;
   float: right;
+  margin-right: 15px;
 }
 header .main_header .responsive_navigation .search input {
   width: 100%;
@@ -359,30 +362,33 @@ header .main_header .responsive_navigation .search input:focus {
   border: 1px solid #2b4e72;
 }
 header .main_header .responsive_navigation .open_menu {
-  font-family: 'Robotoo Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 30px;
   cursor: pointer;
+  margin-left: 15px;
 }
 header .main_header .responsive_navigation .open_menu.fa:before {
   margin-right: 7px;
 }
 header .main_header .responsive_navigation .menu {
+  width: 100%;
   float: left;
   margin-top: 10px;
 }
 header .main_header .responsive_navigation li {
   width: 100%;
   float: left;
-  font-family: 'Robotoo Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   position: relative;
+  padding: 0 15px;
 }
 header .main_header .responsive_navigation li.active {
   background: #2790b0;
 }
 header .main_header .responsive_navigation li a {
-  padding: 10px 15px;
+  padding: 10px 0;
   display: block;
 }
 header .main_header .responsive_navigation li a:hover {
@@ -400,7 +406,7 @@ header .main_header .responsive_navigation li.child:after {
   font-size: 12px;
   position: absolute;
   top: 12px;
-  right: 5px;
+  right: 15px;
 }
 header .main_header .responsive_navigation .sub-menu {
   position: absolute;
@@ -409,10 +415,13 @@ header .main_header .responsive_navigation .sub-menu {
   left: 0;
   background: #2b4e72;
   z-index: 2;
+  -webkit-box-shadow: 0 0 20px -4px #2790b0;
+  box-shadow: 0 0 20px -4px #2790b0;
 }
 header .main_header .responsive_navigation .sub-menu li {
   width: 100%;
   float: left;
+  font-size: 16px;
 }
 header .main_header .responsive_navigation .sub-menu li a {
   width: 100%;
