@@ -1186,9 +1186,46 @@ aside{
 footer{
     width: 100%;
     float: left;
+    background: #fff;
+}
+
+.footer_links{
+    width: 100%;
+    float: left;
+    padding: 40px 20px;
+    @extend .borderbox;
+
+
+    .box{
+        width: 25%;
+        padding-right: 20px;
+        float: left;
+        @extend .borderbox;
+        font-family: 'Roboto', sans-serif;
+        font-size: 17px;
+        line-height: 22px;
+        font-weight: 300;
+        color: $dark;
+
+        &:last-child{
+            padding-right: 0;
+        }
+
+        .title{
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.site_footer{
+    width: 100%;
+    float: left;
     border-top: 3px solid rgba(0,0,0,0.2);
     background: $blue;
     color: #fff;
+    padding: 0 20px;
+    @extend .borderbox;
 
     .content{
         width: 100%;
@@ -1208,20 +1245,25 @@ footer{
 
     .box{
         width: 25%;
-        padding: 0 15px;
+        padding-right: 20px;
         float: left;
         @extend .borderbox;
-        font-family: "Roboto Condensed", sans-serif;
+        font-family: "Roboto", sans-serif;
         font-size: 17px;
         line-height: 22px;
         margin-bottom: 20px;
         display: inline-block;
         color: #fff; 
 
+        &:last-child{
+            padding-right: 0;
+        }
+
         a{
-            font-family: "Roboto Condensed", sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 17px;
             line-height: 22px;
+            font-weight: 300;
             margin-bottom: 10px;
             display: inline-block;
             color: #fff; 
@@ -1314,6 +1356,7 @@ footer{
         label{
             margin: 5px 0;
             cursor: pointer;
+            font-weight: 300;
 
             &:first-child{
                 margin-top: 0;
@@ -1353,7 +1396,7 @@ footer{
             margin-top: 10px;
             padding: 0 20px;
             background: rgba(0,0,0,0.2);
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: 'Roboto', sans-serif;
             font-size: 17px;
             color: #fff;
             cursor: pointer;
@@ -1373,8 +1416,6 @@ footer{
         width: 100%;
         min-height: 60px;
         float: left;
-        padding: 0 15px;
-        @extend .borderbox;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
         line-height: 20px;
@@ -1456,8 +1497,22 @@ footer{
         }
     }
 
-    footer .box{
+    .site_footer .box{
         width: 50%;
+
+        &:nth-child(2n+1){
+            clear: both;
+        }
+    }
+
+    .footer_links .box{
+        width: 50%;
+        margin-top: 30px;
+
+        &:nth-child(1),
+        &:nth-child(2){
+            margin-top: 0;
+        }
 
         &:nth-child(2n+1){
             clear: both;
@@ -1521,8 +1576,16 @@ footer{
         margin-left: 0;
     }
 
-    footer .box{
+    .site_footer .box{
         width: 100%;
+    }
+
+    .footer_links .box{
+        width: 100%;
+
+        &:nth-child(2){
+            margin-top: 30px;
+        }
     }
 }
 
@@ -1593,7 +1656,7 @@ footer{
         }
     }
 
-    footer{
+    .site_footer{
         .contact_form .submit_button{
             width: 100%;
         }
